@@ -1,0 +1,235 @@
+/* -------------------------------------
+CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+* {
+    color: darkslategray;
+}
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+.header-class {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.header-class .header {
+    font-size: 3em;
+    text-align: center;
+    color: blue;
+}
+
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+.meal-details {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    border-radius: 25px;
+}
+
+.meal-details h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.meal-details .meals {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.meal-details .meals h3 {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.meal-details .meals .input-box {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid gray;
+    margin: 1em;
+    text-align: center;
+}
+
+.i-cant-believe-its-not-buttons {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.i-cant-believe-its-not-buttons .button-believe-it {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    border-radius: 1em;
+    color: darkblue;
+    background-color: lightblue;
+    padding: 1em;
+    font-weight: bold;
+    margin-bottom: 3em;
+    box-shadow: 10px 10px 5px #888888;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.charge-overview {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    border-radius: 25px;
+    margin-top: 3em;
+}
+
+.charge-overview h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.charge-overview .button-believe-it {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charge-overview .button-believe-it .button {
+    border-radius: 1em;
+    color: darkblue;
+    background-color: lightblue;
+    padding: 1em;
+    font-weight: bold;
+    margin-bottom: 3em;
+    box-shadow: 10px 10px 5px #888888;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.charge-overview .price {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charge-overview .price h3 {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.charge-overview .reset-button {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charge-overview .reset-button .button {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.earnings-info {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    border-radius: 25px;
+    margin-top: 3em;
+}
+
+.earnings-info h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.earnings-info .earnings {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.earnings-info .earnings h3 {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.earnings-info .reset-button {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.earnings-info .reset-button .button {
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+    text-align: center;
+}
+
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+
+/* -------------------------------------
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles bellow this line
+*/
