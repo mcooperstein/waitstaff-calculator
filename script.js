@@ -35,7 +35,11 @@ app.service('mealDataService', function () {
 });
 
 app.controller('myCtrl', function ($scope, mealDataService) {
-    $scope.data = {};
+    $scope.data = {
+        subtotal: 0,
+        tipAmt: 0,
+        total: 0
+    };
 
     /*ADDS THE MEAL WHEN 'ADD MEAL' IS CLICKED*/
     $scope.submit = function () {
@@ -87,7 +91,8 @@ app.controller('myCtrl', function ($scope, mealDataService) {
     //RESET SECTION
     //WHEN CLICK RESET BUTTON//
     $scope.reset = function () {
-        mealDataService.reset();
+        //mealDataService.reset();
+        location.reload();
     };
 
     /*$scope.getMealCount = function () {
