@@ -41,6 +41,25 @@ hr {
     height: 2px;
 }
 
+.nav-class {
+    text-align: center;
+}
+
+a {
+    margin: 1em;
+    font-size: 1.25em;
+}
+
+.explanation div {
+    border: 3px solid blue;
+    border-radius: 25px;
+}
+
+.explain {
+    word-spacing: 0.1em;
+    text-align: center;
+}
+
 
 /* -------------------------------------
 Header styles (Main Module)
@@ -95,6 +114,11 @@ Content styles (Main Module)
 .input-box {
     border: 2px solid gray;
     text-align: center;
+}
+
+.charge-details {
+    border: 3px solid blue;
+    border-radius: 25px;
 }
 
 .charge-overview {
