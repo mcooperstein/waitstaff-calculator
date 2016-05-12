@@ -64,15 +64,20 @@ app.controller('detailsController', function ($scope, mealDataService) {
 
     /*CLEARS FORM FOR NEXT MEAL*/
     $scope.cancelForm = function () {
-        $scope.price = '';
-        $scope.tax = '';
-        $scope.tip = '';
+        $scope.data.price = 0;
+        $scope.data.tax = 0;
+        $scope.data.tip = 0;
+        //alert('cancel');
     };
 
     /*ADDS THE MEAL WHEN 'ADD MEAL' IS CLICKED*/
     $scope.submit = function () {
 
         $scope.mealCount++;
+
+        var price = parseFloat($scope.price);
+        var tax = parseFloat($scope.tax);
+        var tip = parseFloat($scope.tip);
 
         //COLLECTING DATA FROM CURRENT MEAL PRIOR TO SENDING TO SERVICE ARRAY//
         $scope.data.subtotal = ($scope.data.price + ($scope.data.price * ($scope.data.tax / 100)));
@@ -89,6 +94,7 @@ app.controller('detailsController', function ($scope, mealDataService) {
 
         //Clears fields for next meal input
         $scope.cancelForm();
+
     };
 });
 
@@ -105,7 +111,6 @@ app.controller('chargesController', function ($scope, mealDataService) {
     $scope.getMeals = function () {
         var meals = mealDataService.getMeals();
         $scope.meals = meals;
-
     };
     $scope.getMeals();
     $scope.mealCount = $scope.meals.length;
