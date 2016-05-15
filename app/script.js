@@ -1,22 +1,34 @@
-var app = angular.module('myApp', ['ngMessages', 'ngRoute']);
+var app = angular.module('myApp', ['ngMessages', 'ngRoute', 'ngAnimate']);
 
 app.config(function ($routeProvider) {
-    $routeProvider.when('/details', {
-            templateUrl: 'partials/details.html',
-            controller: 'detailsController'
-        })
-        .when('/charges', {
-            templateUrl: 'partials/charges.html',
-            controller: 'chargesController'
-        })
-        .when('/earnings', {
-            templateUrl: 'partials/earnings.html',
-            controller: 'earningsController'
-        })
-        .otherwise({
-            redirectTo: '/details'
+        $routeProvider.when('/details', {
+                templateUrl: 'partials/details.html',
+                controller: 'detailsController'
+            })
+            .when('/charges', {
+                templateUrl: 'partials/charges.html',
+                controller: 'chargesController'
+            })
+            .when('/earnings', {
+                templateUrl: 'partials/earnings.html',
+                controller: 'earningsController'
+            })
+            .otherwise({
+                redirectTo: '/details'
+            });
+    })
+    .run(function ($rootScope, $location, $timeout) {
+        $rootScope.$on('$routeChangeError', function () {
+            $location.path('/error');
         });
-});
+        $rootScope.$on('$routeChangeStart', function () {
+            $rootScope.isLoading = true;
+        });
+        $rootScope.$on('$routeChangeSuccess', function () {
+            $rootScope.isLoading = false;
+        }, 2000);
+    });
+
 
 
 app.service('mealDataService', function () {
