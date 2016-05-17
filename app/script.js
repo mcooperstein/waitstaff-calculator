@@ -65,7 +65,7 @@ app.service('mealDataService', function () {
     };
 });
 
-app.controller('detailsController', function ($scope, mealDataService) {
+app.controller('detailsController', function ($scope, mealDataService, $timeout) {
     /*$scope.data = {
         subtotal: 0,
         tipAmt: 0,
@@ -106,8 +106,20 @@ app.controller('detailsController', function ($scope, mealDataService) {
 
         //Clears fields for next meal input
         $scope.cancelForm();
-
     };
+
+    //Animate message
+    $scope.show = false;
+    $scope.addMessage = function () {
+        $scope.show = true;
+        $timeout(function () {
+            hideMsg();
+        }, 2000)
+    }
+
+    function hideMsg() {
+        $scope.show = false;
+    }
 });
 
 

@@ -68,6 +68,10 @@ a {
     text-align: center;
 }
 
+.msg {
+    text-align: center;
+}
+
 
 /* -------------------------------------
 Header styles (Main Module)
@@ -181,6 +185,11 @@ Content styles (Main Module)
 }
 
 .btn-danger {
+    margin-bottom: 1em;
+}
+
+.message-section {
+    font-size: 1.5em;
     margin-bottom: 1em;
 }
 
